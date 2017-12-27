@@ -1737,7 +1737,7 @@ int lfs_remove(lfs_t *lfs, const char *path) {
         if (err) {
             return err;
         } else if (dir.d.size != sizeof(dir.d)+4) {
-            return LFS_ERR_INVAL;
+            return LFS_ERR_NOTEMPTY;
         }
     }
 
